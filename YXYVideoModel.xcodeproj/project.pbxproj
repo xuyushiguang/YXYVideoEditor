@@ -16,6 +16,8 @@
 		03363E992149F16400FA3EFE /* 2018.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 03363E982149F16400FA3EFE /* 2018.mp4 */; };
 		03363E9B214A09E100FA3EFE /* 2017.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 03363E9A214A09E100FA3EFE /* 2017.mp4 */; };
 		03363E9D214A166900FA3EFE /* ico.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 03363E9C214A166900FA3EFE /* ico.jpeg */; };
+		03363EAB214A84F200FA3EFE /* XScratchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03363EA9214A84F100FA3EFE /* XScratchView.m */; };
+		03363EAC214A84F200FA3EFE /* XRGBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 03363EAA214A84F200FA3EFE /* XRGBTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		03363E9A214A09E100FA3EFE /* 2017.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2017.mp4; sourceTree = "<group>"; };
 		03363E9C214A166900FA3EFE /* ico.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ico.jpeg; sourceTree = "<group>"; };
 		03363E9E214A3D7D00FA3EFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		03363EA7214A84F100FA3EFE /* XScratchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XScratchView.h; sourceTree = "<group>"; };
+		03363EA8214A84F100FA3EFE /* XRGBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGBTool.h; sourceTree = "<group>"; };
+		03363EA9214A84F100FA3EFE /* XScratchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XScratchView.m; sourceTree = "<group>"; };
+		03363EAA214A84F200FA3EFE /* XRGBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGBTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,10 @@
 				03363E9C214A166900FA3EFE /* ico.jpeg */,
 				03363E9A214A09E100FA3EFE /* 2017.mp4 */,
 				03363E982149F16400FA3EFE /* 2018.mp4 */,
+				03363EA8214A84F100FA3EFE /* XRGBTool.h */,
+				03363EAA214A84F200FA3EFE /* XRGBTool.m */,
+				03363EA7214A84F100FA3EFE /* XScratchView.h */,
+				03363EA9214A84F100FA3EFE /* XScratchView.m */,
 				03363E822149F10100FA3EFE /* AppDelegate.h */,
 				03363E832149F10100FA3EFE /* AppDelegate.m */,
 				03363E852149F10100FA3EFE /* ViewController.h */,
@@ -155,9 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03363EAB214A84F200FA3EFE /* XScratchView.m in Sources */,
 				03363E872149F10100FA3EFE /* ViewController.m in Sources */,
 				03363E922149F10300FA3EFE /* main.m in Sources */,
 				03363E842149F10100FA3EFE /* AppDelegate.m in Sources */,
+				03363EAC214A84F200FA3EFE /* XRGBTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
