@@ -1,9 +1,9 @@
 //
 //  ViewController.m
 //  YXYVideoModel
-//
-//  Created by LiuGen on 2018/9/13.
-//  Copyright © 2018年 Test. All rights reserved.
+//邮箱：939607134@qq.com
+//  Created by yxy on 2018/9/13.
+//  Copyright © 2018年 yxy. All rights reserved.
 //
 //    AVAsset：素材库里的素材；
 //    AVAssetTrack：素材的轨道；
@@ -77,7 +77,54 @@
     [bt6 addTarget:self action:@selector(actionForButton6) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bt6];
     
+    UIButton *bt7 = [UIButton buttonWithType:UIButtonTypeCustom];
+    bt7.backgroundColor = [UIColor redColor];
+    bt7.frame = CGRectMake(100, 470, 100, 50);
+    [bt7 setTitle:@"视频压缩" forState:UIControlStateNormal];
+    [bt7 addTarget:self action:@selector(actionForButton7) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:bt7];
 }
+#pragma mark =视频压缩=
+-(void)actionForButton7
+{
+    NSString *fp = [Cache_PATH_IN_DOMAINS stringByAppendingString:@"/2018.mp4"];
+    //            [data writeToFile:fp atomically:YES];
+    NSString *filePath = fp;
+    
+    //1.将素材拖入到素材库中
+    AVURLAsset *asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:filePath]];
+    
+    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+    
+    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
+    if (isExist) {
+        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
+    }
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+    //4.导出
+    /**
+     AVAssetExportPresetMediumQuality
+     AVAssetExportPresetLowQuality
+     AAVAssetExportPresetHighestQuality
+     三种压缩自己选择
+     */
+    AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetMediumQuality];
+   
+    exporter.outputURL = [NSURL fileURLWithPath:outputFilePath isDirectory:YES];
+    exporter.outputFileType = AVFileTypeMPEG4;
+    exporter.shouldOptimizeForNetworkUse = YES;
+    [exporter exportAsynchronouslyWithCompletionHandler:^{
+        if (exporter.error) {
+            //...
+            NSLog(@"error: %@",exporter.error);
+        }else{
+            //...
+            NSLog(@"success");
+        }
+    }];
+    
+}
+
 #pragma mark =滤镜=
 -(void)actionForButton6
 {

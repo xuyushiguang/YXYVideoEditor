@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
 //  YXYVideoModel
-//
-//  Created by LiuGen on 2018/9/13.
-//  Copyright © 2018年 Test. All rights reserved.
+//邮箱：939607134@qq.com
+//  Created by yxy on 2018/9/13.
+//  Copyright © 2018年 yxy. All rights reserved.
 //
 
 #import "AppDelegate.h"

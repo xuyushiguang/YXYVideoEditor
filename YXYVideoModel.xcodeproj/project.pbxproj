@@ -32,6 +32,7 @@
 		03363E982149F16400FA3EFE /* 2018.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2018.mp4; sourceTree = "<group>"; };
 		03363E9A214A09E100FA3EFE /* 2017.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2017.mp4; sourceTree = "<group>"; };
 		03363E9C214A166900FA3EFE /* ico.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ico.jpeg; sourceTree = "<group>"; };
+		03363E9E214A3D7D00FA3EFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		03363E812149F10100FA3EFE /* YXYVideoModel */ = {
 			isa = PBXGroup;
 			children = (
+				03363E9E214A3D7D00FA3EFE /* README.md */,
 				03363E9C214A166900FA3EFE /* ico.jpeg */,
 				03363E9A214A09E100FA3EFE /* 2017.mp4 */,
 				03363E982149F16400FA3EFE /* 2018.mp4 */,
