@@ -16,6 +16,7 @@
 		03363E992149F16400FA3EFE /* 2018.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 03363E982149F16400FA3EFE /* 2018.mp4 */; };
 		03363E9B214A09E100FA3EFE /* 2017.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 03363E9A214A09E100FA3EFE /* 2017.mp4 */; };
 		03363E9D214A166900FA3EFE /* ico.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 03363E9C214A166900FA3EFE /* ico.jpeg */; };
+		03954E0D2150972300AF6E06 /* YXYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03954E0C2150972300AF6E06 /* YXYViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		03363E9A214A09E100FA3EFE /* 2017.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2017.mp4; sourceTree = "<group>"; };
 		03363E9C214A166900FA3EFE /* ico.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ico.jpeg; sourceTree = "<group>"; };
 		03363E9E214A3D7D00FA3EFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		03954E0B2150972300AF6E06 /* YXYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YXYViewController.h; sourceTree = "<group>"; };
+		03954E0C2150972300AF6E06 /* YXYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXYViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				03363E832149F10100FA3EFE /* AppDelegate.m */,
 				03363E852149F10100FA3EFE /* ViewController.h */,
 				03363E862149F10100FA3EFE /* ViewController.m */,
+				03954E0B2150972300AF6E06 /* YXYViewController.h */,
+				03954E0C2150972300AF6E06 /* YXYViewController.m */,
 				03363E882149F10100FA3EFE /* Main.storyboard */,
 				03363E8B2149F10300FA3EFE /* Assets.xcassets */,
 				03363E8D2149F10300FA3EFE /* LaunchScreen.storyboard */,
@@ -158,6 +163,7 @@
 				03363E872149F10100FA3EFE /* ViewController.m in Sources */,
 				03363E922149F10300FA3EFE /* main.m in Sources */,
 				03363E842149F10100FA3EFE /* AppDelegate.m in Sources */,
+				03954E0D2150972300AF6E06 /* YXYViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
