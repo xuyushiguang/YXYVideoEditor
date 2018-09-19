@@ -49,11 +49,11 @@
             NSUInteger blue = rawData[byteIndex+2];
             NSUInteger alpha = rawData[byteIndex+3];
             
-            XPixelItem *pixelItem = [[XPixelItem alloc] init];
-            pixelItem.color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha/255.0];//像素点颜色
-            pixelItem.location = CGPointMake(x, y);//像素点位置
-            
-            [pixelsArr addObject:pixelItem];
+//            XPixelItem *pixelItem = [[XPixelItem alloc] init];
+//            pixelItem.color = [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha/255.0];//像素点颜色
+//            pixelItem.location = CGPointMake(x, y);//像素点位置
+//
+//            [pixelsArr addObject:pixelItem];
             if  (red+green+blue == 0 && (alpha/255.0 >= 0.5)){//计算黑色部分所占比例
                 blackPixel++;
             }
