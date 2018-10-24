@@ -5,7 +5,10 @@
 //  Created by LiuGen on 2018/9/18.
 //  Copyright © 2018年 Test. All rights reserved.
 //
-
+/**
+ 视频录制
+ 
+ */
 #import "YXYViewController.h"
 #import <AVFoundation/AVFoundation.h>
 

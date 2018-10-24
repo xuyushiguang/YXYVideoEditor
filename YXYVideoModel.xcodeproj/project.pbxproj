@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03030725218073D7004C029D /* OpenGLView20.m in Sources */ = {isa = PBXBuildFile; fileRef = 03030723218073D7004C029D /* OpenGLView20.m */; };
 		03363E842149F10100FA3EFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03363E832149F10100FA3EFE /* AppDelegate.m */; };
 		03363E872149F10100FA3EFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03363E862149F10100FA3EFE /* ViewController.m */; };
 		03363E8A2149F10100FA3EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03363E882149F10100FA3EFE /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03030723218073D7004C029D /* OpenGLView20.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView20.m; sourceTree = "<group>"; };
+		03030724218073D7004C029D /* OpenGLView20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView20.h; sourceTree = "<group>"; };
 		03363E7F2149F10100FA3EFE /* YXYVideoModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXYVideoModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03363E822149F10100FA3EFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		03363E832149F10100FA3EFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				03363E862149F10100FA3EFE /* ViewController.m */,
 				03954E0B2150972300AF6E06 /* YXYViewController.h */,
 				03954E0C2150972300AF6E06 /* YXYViewController.m */,
+				03030724218073D7004C029D /* OpenGLView20.h */,
+				03030723218073D7004C029D /* OpenGLView20.m */,
 				03363E882149F10100FA3EFE /* Main.storyboard */,
 				03363E8B2149F10300FA3EFE /* Assets.xcassets */,
 				03363E8D2149F10300FA3EFE /* LaunchScreen.storyboard */,
@@ -164,6 +169,7 @@
 				03363E922149F10300FA3EFE /* main.m in Sources */,
 				03363E842149F10100FA3EFE /* AppDelegate.m in Sources */,
 				03954E0D2150972300AF6E06 /* YXYViewController.m in Sources */,
+				03030725218073D7004C029D /* OpenGLView20.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
