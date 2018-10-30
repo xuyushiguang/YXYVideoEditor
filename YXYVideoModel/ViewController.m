@@ -30,8 +30,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"==%@",kPathDocument1);
-   
+    NSLog(@" \n  %@",kPathDocument1);
+    // !!!: 建议使用模拟器运行这个工程，可以根据打印出来的文件路径(kPathDocument1是上面的宏定义)找到合成的视频文件;
+    
+    /**
+     首先把一段视频放在一个临时文件夹里面(Cache_PATH_IN_DOMAINS是上面的宏定义)，以备后面测试使用;
+     最终编辑完成的视频放在（kPathDocument1是上面的宏定义）文件里面，
+     */
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"2018" ofType:@"mp4"];
+    NSData *data = [NSData dataWithContentsOfFile:filePath];
+    NSString *fp = [Cache_PATH_IN_DOMAINS stringByAppendingString:@"/2018.mp4"];
+    unlink([fp UTF8String]);
+    [data writeToFile:fp atomically:YES];
+    
+    NSString *filePath2 = [[NSBundle mainBundle] pathForResource:@"2017" ofType:@"mp4"];
+    NSData *data2 = [NSData dataWithContentsOfFile:filePath2];
+    NSString *fp2 = [Cache_PATH_IN_DOMAINS stringByAppendingString:@"/2017.mp4"];
+    unlink([fp2 UTF8String]);
+    [data2 writeToFile:fp2 atomically:YES];
+    
     
     UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
     bt.backgroundColor = [UIColor redColor];
@@ -94,13 +111,9 @@
     //1.将素材拖入到素材库中
     AVURLAsset *asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:filePath]];
     
-    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
-    
-    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
-    if (isExist) {
-        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
-    }
-    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+   
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018_7.mp4"];
+    unlink([outputFilePath UTF8String]);
     //4.导出
     /**
      AVAssetExportPresetMediumQuality
@@ -143,7 +156,7 @@
     //   NSLog(@"%@",[CIFilter filterNamesInCategory:kCICategoryVideo]) ;
     
     /**
-     cpu占用200%多，太可怕了。
+     cpu占用200%多，太可怕了。非常耗时间了；
      */
     AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoCompositionWithAsset:asset applyingCIFiltersWithHandler:^(AVAsynchronousCIImageFilteringRequest * _Nonnull request) {
         CIImage *source = request.sourceImage.imageByClampingToExtent;
@@ -163,15 +176,8 @@
     }];
     
 
-    
-    
-    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
-    
-    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
-    if (isExist) {
-        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
-    }
-    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018_6.mp4"];
+    unlink([outputFilePath UTF8String]);
     //4.导出
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetMediumQuality];
     exporter.videoComposition = videoComposition;
@@ -266,13 +272,8 @@
 //    videoComposition.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayers:@[videoLayer,videoLayer2] inLayer:parentLayer];
     
     
-    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
-    
-    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
-    if (isExist) {
-        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
-    }
-    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018_5.mp4"];
+    unlink([outputFilePath UTF8String]);
     //4.导出
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:composition presetName:AVAssetExportPresetMediumQuality];
     exporter.videoComposition = videoComposition;
@@ -363,13 +364,8 @@
     videoComposition.frameDuration = CMTimeMake(1, 30);
     
     
-    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
-    
-    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
-    if (isExist) {
-        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
-    }
-    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018_4.mp4"];
+    unlink([outputFilePath UTF8String]);
     //4.导出
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:composition presetName:AVAssetExportPresetMediumQuality];
     exporter.videoComposition = videoComposition;
@@ -402,13 +398,8 @@
     AVAsset *asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:filePath]];
 
     
-    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
-    
-    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
-    if (isExist) {
-        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
-    }
-    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018_3.mp4"];
+    unlink([outputFilePath UTF8String]);
     //4.导出
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetMediumQuality];
 
@@ -497,14 +488,9 @@
     //裁剪出对应的大小
     videoComposition.frameDuration = CMTimeMake(1, 30);
     
-    
-    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
-    
-    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
-    if (isExist) {
-        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
-    }
-    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018_2.mp4"];
+    unlink([outputFilePath UTF8String]);
     //4.导出
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:composition presetName:AVAssetExportPresetMediumQuality];
     exporter.videoComposition = videoComposition;
@@ -571,14 +557,8 @@
     //裁剪出对应的大小
     videoComposition.frameDuration = CMTimeMake(1, 30);
     
-    
-    NSString *outputFileDir = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
-    
-    BOOL isExist = [[NSFileManager defaultManager] isExecutableFileAtPath:outputFileDir];
-    if (isExist) {
-        [[NSFileManager defaultManager] removeItemAtPath:outputFileDir error:nil];
-    }
-    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018.mp4"];
+    NSString *outputFilePath = [kPathDocument1 stringByAppendingString:@"/2018_1.mp4"];
+    unlink([outputFilePath UTF8String]);
     //4.导出
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:composition presetName:AVAssetExportPresetMediumQuality];
     exporter.videoComposition = videoComposition;
